@@ -1,3 +1,5 @@
+package cookie;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,9 +28,9 @@ public class LoginServlet extends HttpServlet {
             //setting expire time
             loginCookie.setMaxAge(30 * 60);
             resp.addCookie(loginCookie);
-            resp.sendRedirect("/LoginSuccess.jsp");
+            resp.sendRedirect("/view/cookie_sample/LoginSuccess.jsp");
         } else {
-            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/index.jsp");
+            RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/view/cookie_sample/index.jsp");
             PrintWriter writer = resp.getWriter();
             writer.println("<h1 style='color:red'>user or pass is incorrect</h2>");
             dispatcher.include(req, resp);

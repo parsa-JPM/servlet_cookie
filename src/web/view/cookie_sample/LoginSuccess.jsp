@@ -19,7 +19,7 @@ pageEncoding="US-ASCII"%>
 %>
 <h3>Hi <%=userName %>, Login successful.</h3>
 <br>
-<form action="LogoutServlet" method="post">
+<form action="/LogoutServlet" method="post">
     <input type="submit" value="Logout" >
 </form>
 </body>

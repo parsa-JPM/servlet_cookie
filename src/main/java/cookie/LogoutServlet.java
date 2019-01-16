@@ -1,3 +1,5 @@
+package cookie;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -31,7 +33,7 @@ public class LogoutServlet extends HttpServlet {
             loginCookie.setMaxAge(0);
             resp.addCookie(loginCookie);
         }
-        resp.sendRedirect("index.jsp");
+        resp.sendRedirect("/view/cookie_sample/index.jsp");
 
     }
 }
