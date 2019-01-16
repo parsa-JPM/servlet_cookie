@@ -27,7 +27,7 @@ public class LogoutServlet extends HttpServlet {
                 }
             }
         }
-        if(loginCookie != null){
+        if (loginCookie != null) {
             loginCookie.setMaxAge(0);
             resp.addCookie(loginCookie);
         }
